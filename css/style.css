@@ -81,6 +81,20 @@ html,body{
     }
 }
 
+@media only screen and (max-width: 750px) {
+    .element {
+        font-size: 3em !important;
+    }
+
+	.authorName{
+		font-size: 3em !important;
+	}
+
+	.wish{
+		font-size: 3em !important;
+	}
+}
+
 .wish{
 	font-family: 'Great Vibes', cursive;
 	color: #fff;
@@ -117,7 +131,7 @@ blockquote{
 
 .footer{
 	width: 60%;
-	position: absolute;
+	position: fixed;
 	margin: 0 20%;
-	bottom: 0;
+	top: 0;
 }
