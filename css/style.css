@@ -75,6 +75,10 @@ html,body{
     .diwali-box {
         width: 100%;
     }
+
+    .footer{
+    	position: relative !important;
+    }
 }
 
 .wish{
@@ -114,5 +118,6 @@ blockquote{
 .footer{
 	width: 60%;
 	position: absolute;
+	margin: 0 20%;
 	bottom: 0;
 }
