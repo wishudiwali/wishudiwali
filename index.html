@@ -57,7 +57,7 @@
 					  <button type="button" class="btn btn-success col-xs-6">
 						<div class='whatsapp'>
 						<i class='fa fa-whatsapp'></i>
-						<whatsapp expr:text='data:post.title' expr:href="data:post.url"></whatsapp>
+						<whatsapp expr:text='' expr:href=""></whatsapp>
 						<a href="kipu" data-action="share/whatsapp/share">Share</a>
 						</div>
 					  	<!-- <a class="whatsapp-share-button" id="app" href="#" data-action="share/whatsapp/share"><i class="fa fa-whatsapp"></i></a> -->
@@ -67,14 +67,6 @@
 			</div>	
 		</div>
 	</body>
-	<script>
-	//<![CDATA[
-	    var x = document.getElementsByTagName("whatsapp")[0].getAttribute("href");
-	    var y = document.getElementsByTagName("whatsapp")[0].getAttribute("text");
-	    var z = "whatsapp://send?text=" + y + ' ' + x;
-	document.body.innerHTML = document.body.innerHTML.replace('kipu', z);
-	//]]>
-	</script>
 	<script type="text/javascript">
 		var foo = getParameterByName('name');
 		// var url = window.location.href.split('#');
@@ -84,7 +76,8 @@
 		}
 		document.querySelector('.author').innerText=author;
 		document.title = 'Wishes from '+author;
-		// document.getElementById('app').href = "https://whatsapp://send?text="+encodeURI(window.location.href);
+	    var x = document.getElementsByTagName("whatsapp")[0].setAttribute("href",window.location.href);
+	    var y = document.getElementsByTagName("whatsapp")[0].setAttribute("text","Greetings from Diwali.");
 		var options = {
 		  strings: [author, author],
 		  typeSpeed: 40,
@@ -103,5 +96,15 @@
 		    if (!results[2]) return '';
 		    return decodeURIComponent(results[2].replace(/\+/g, " "));
 		}
+	</script>
+	<script>
+	//<![CDATA[
+	    var x = document.getElementsByTagName("whatsapp")[0].getAttribute("href");
+	    var y = document.getElementsByTagName("whatsapp")[0].getAttribute("text");
+	    console.log(x);
+	    console.log(y);
+	    var z = "whatsapp://send?text=" + y + ' ' + x;
+	document.body.innerHTML = document.body.innerHTML.replace('kipu', z);
+	//]]>
 	</script>
 </html>
