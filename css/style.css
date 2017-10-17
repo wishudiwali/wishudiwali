@@ -76,9 +76,9 @@ html,body{
         width: 100% !important;
     }
 
-    .footer{
+/*    .footer{
     	position: relative !important;
-    }
+    }*/
 }
 
 @media only screen and (max-width: 750px) {
@@ -130,8 +130,8 @@ blockquote{
 }
 
 .footer{
-	width: 60%;
 	position: fixed;
+	width: 60%;
 	margin: 0 20%;
-	top: 0;
+	bottom: 0;
 }
