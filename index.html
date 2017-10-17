@@ -86,8 +86,8 @@
 		}
 		document.querySelector('.author').innerText=author;
 		document.title = 'Wishes from '+author;
-		document.getElementById('fb').href = "https://www.facebook.com/sharer/sharer.php?"+window.location.href;
-		document.getElementById('app').href = "http://whatsapp://send?text="+window.location.href;
+		document.getElementById('fb').href = "https://www.facebook.com/sharer/sharer.php?"+encodeURI(window.location.href);
+		document.getElementById('app').href = "http://whatsapp://send?text="+encodeURI(window.location.href);
 		var options = {
 		  strings: [author, author],
 		  typeSpeed: 40,
