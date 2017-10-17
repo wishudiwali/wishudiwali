@@ -139,3 +139,32 @@ blockquote{
 .whatsapp-share-button{
 	color: #fff;
 }
+
+.whatsapp a:hover {
+ background: linear-gradient(#01A507, #069A00);
+}
+.whatsapp i {
+ color: #038F02;
+ background: #FFF;
+ text-shadow: none;
+ font-weight: 900;
+ border-radius: 2px;
+ position: relative;
+ left: -3px;
+ margin-right: -4px;
+ padding: 2px;
+ -webkit-font-smoothing: antialiased;
+}
+.whatsapp a {
+ font-family: sans-serif;
+ font-weight: 700;
+ text-decoration: none;
+ font-size: 11px;
+ color: #FFF;
+ padding: 7px;
+ background: linear-gradient(#009805, #058400);
+ padding-top: 4px;
+ border-radius: 2px;
+ padding-bottom: 5px;
+ text-shadow: 1px 1px 2px #797272;
+}

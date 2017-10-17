@@ -55,13 +55,26 @@
 					</div>
 					<div class="form-group col-sm-6 col-xs-12">
 					  <button type="button" class="btn btn-success col-xs-6">
-					  	<a class="whatsapp-share-button" id="app" href="#" data-action="share/whatsapp/share"><i class="fa fa-whatsapp"></i></a>
+						<div class='whatsapp'>
+						<i class='fa fa-whatsapp'></i>
+						<whatsapp expr:text='data:post.title' expr:href="data:post.url"></whatsapp>
+						<a href="kipu" data-action="share/whatsapp/share">Share</a>
+						</div>
+					  	<!-- <a class="whatsapp-share-button" id="app" href="#" data-action="share/whatsapp/share"><i class="fa fa-whatsapp"></i></a> -->
 					  </button>
 					</div>
 				</form>
 			</div>	
 		</div>
 	</body>
+	<script>
+	//<![CDATA[
+	    var x = document.getElementsByTagName("whatsapp")[0].getAttribute("href");
+	    var y = document.getElementsByTagName("whatsapp")[0].getAttribute("text");
+	    var z = "whatsapp://send?text=" + y + ' ' + x;
+	document.body.innerHTML = document.body.innerHTML.replace('kipu', z);
+	//]]>
+	</script>
 	<script type="text/javascript">
 		var foo = getParameterByName('name');
 		// var url = window.location.href.split('#');
@@ -71,7 +84,7 @@
 		}
 		document.querySelector('.author').innerText=author;
 		document.title = 'Wishes from '+author;
-		document.getElementById('app').href = "https://whatsapp://send?text="+encodeURI(window.location.href);
+		// document.getElementById('app').href = "https://whatsapp://send?text="+encodeURI(window.location.href);
 		var options = {
 		  strings: [author, author],
 		  typeSpeed: 40,
