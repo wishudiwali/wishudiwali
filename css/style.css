@@ -73,7 +73,7 @@ html,body{
 
 @media only screen and (max-width: 800px) {
     .diwali-box {
-        width: 100%;
+        width: 100% !important;
     }
 
     .footer{
