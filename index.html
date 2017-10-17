@@ -7,6 +7,11 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.6/typed.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<meta property="og:url"           content="http://www.your-domain.com/your-page.html" />
+		<meta property="og:type"          content="website" />
+		<meta property="og:title"         content="Your Website Title" />
+		<meta property="og:description"   content="Your description" />
+		<meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-101629966-2"></script>
 		<script>
@@ -26,6 +31,15 @@
 		<script>
 		(adsbygoogle = window.adsbygoogle || []).push({});
 		</script>
+		<!-- Load Facebook SDK for JavaScript -->
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
 	</head>
 	<body>
 		<div class="wrapper">
@@ -50,9 +64,11 @@
 					  <input type="text" name="name" placeholder="Enter Your Name" class="form-control" style="width: 100%;" id="usr">
 					</div>
 					<div class="form-group col-sm-6 col-xs-12">
-					  <button type="button" class="btn btn-success col-xs-6"><a href="whatsapp://send" data-text="" data-href=""><i class="fa fa-whatsapp"></i></a></button>
+					  <button type="button" class="btn btn-success col-xs-6">
+					  	<a href="whatsapp://send?text=YOUR TEXT HERE"><i class="fa fa-whatsapp"></i></a</a>
+					  </button>
 					  <button type="button" class="btn btn-primary col-xs-6">
-					  	<a href="#" target="_blank" id="fb">
+					  	<a href="#" target="_blank" class="fb-share-button" data-href="https://www.google.co.in/?gfe_rd=cr&dcr=0&ei=mBrmWdDeMPHI8AegpYHICw" data-layout="button_count">
 					  		<i class="fa fa-facebook"></i>
 					  	</a>
 					  </button>
