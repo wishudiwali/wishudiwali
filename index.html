@@ -56,10 +56,10 @@
 			<div class="footer">
 				<form id="add-form" action="./index.html">
 					<div class="form-group col-sm-6 col-xs-12">
-					  <input type="text" required name="name" placeholder="Enter your Name to send greetings" class="form-control" style="width: 100%;" id="usr">
+					  <input type="text" name="name" placeholder="Enter your Name to send greetings" class="form-control" style="width: 100%;" id="usr">
 					</div>
 					<div class="form-group col-sm-6 col-xs-12">
-					  <button type="submit" class="btn btn-success col-xs-6">
+					  <button type="button" class="btn btn-success col-xs-6">
 						<div class='whatsapp'>
 						<i class='fa fa-whatsapp'></i>
 						<whatsapp expr:text='' expr:href=""></whatsapp>
@@ -75,7 +75,7 @@
 	<script type="text/javascript">
 		var foo = getParameterByName('name');
 		// var url = window.location.href.split('#');
-		var author = 'john';
+		var author = 'your name';
 		if (foo) {
 			author = foo;
 		}
