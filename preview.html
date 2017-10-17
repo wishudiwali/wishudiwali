@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<title>Diwali Greetings</title>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="./css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.6/typed.js"></script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div id="snow">
+			</div>
+			<div class="diwali-box">
+				<p class="element">
+					<span>Happy Diwali </span>
+				</p>
+				<div class="authorName"></div>
+				<p class="wish">
+					Wish You a Happy and Safe Diwali
+				</p>
+				<blockquote>
+					May Millions Of Lamps Illuminate Your Life With Endless Joy, Prosperity, Health And Wealth Forever.
+					- by <span class="author"></span>
+				</blockquote>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var foo = getParameterByName('name');
+		// var url = window.location.href.split('#');
+		var author = 'john';
+		if (foo) {
+			author = foo;
+		}
+		document.querySelector('.author').innerText=author;
+		var options = {
+		  strings: [author, author],
+		  typeSpeed: 40,
+		  loop: true
+		}
+
+		var typed = new Typed(".authorName", options);
+
+
+		function getParameterByName(name, url) {
+		    if (!url) url = window.location.href;
+		    name = name.replace(/[\[\]]/g, "\\$&");
+		    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+		        results = regex.exec(url);
+		    if (!results) return null;
+		    if (!results[2]) return '';
+		    return decodeURIComponent(results[2].replace(/\+/g, " "));
+		}
+	</script>
+</html>
