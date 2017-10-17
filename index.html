@@ -7,11 +7,10 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.6/typed.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-		<meta property="og:url"           content="http://www.your-domain.com/your-page.html" />
-		<meta property="og:type"          content="website" />
-		<meta property="og:title"         content="Your Website Title" />
-		<meta property="og:description"   content="Your description" />
-		<meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
+		<meta property="og:url"           content="https://github.com/wishudiwali/wishudiwali" />
+		<meta property="og:title"         content="Diwali Greetings" />
+		<meta property="og:description"   content="Wish u very Happy Diwali." />
+		<meta property="og:image"         content="https://cdn.iconscout.com/public/images/icon/premium/png-512/diya-lamp-diwali-decoration-festival-indian-celebration-34fd5b0f4ee602e7-512x512.png" />
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-101629966-2"></script>
 		<script>
@@ -76,8 +75,9 @@
 		}
 		document.querySelector('.author').innerText=author;
 		document.title = 'Wishes from '+author;
+		var greetings = "Wish u better and safe Diwali from"+author;
 	    var x = document.getElementsByTagName("whatsapp")[0].setAttribute("href",window.location.href);
-	    var y = document.getElementsByTagName("whatsapp")[0].setAttribute("text","Greetings from Diwali.");
+	    var y = document.getElementsByTagName("whatsapp")[0].setAttribute("text",greetings);
 		var options = {
 		  strings: [author, author],
 		  typeSpeed: 40,
