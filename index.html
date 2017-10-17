@@ -26,22 +26,19 @@
 		     style="display:block"
 		     data-ad-client="ca-pub-8383222494793134"
 		     data-ad-slot="1833160039"
-		     data-ad-format="auto"></ins>
+		     data-ad-format="auto" style="z-index: 9999 !important;"></ins>
 		<script>
 		(adsbygoogle = window.adsbygoogle || []).push({});
 		</script>
 	<body>
 		<div class="wrapper">
-<!-- 			<div id="snow">
-			</div> -->
+			<div id="snow">
+			</div>
 			<div class="diwali-box">
-				<p class="element">
-					<span>Happy Diwali </span>
+				<p class="wish">
+					
 				</p>
 				<div class="authorName"></div>
-				<p class="wish">
-					Wish You a Happy and Safe Diwali
-				</p>
 				<blockquote>
 					May Millions Of Lamps Illuminate Your Life With Endless Joy, Prosperity, Health And Wealth Forever.
 					- by <span class="author"></span>
@@ -80,10 +77,12 @@
 		// }
 
 		// var typed = new Typed(".authorName", options);
-		document.querySelector('.authorName').innerText=author;
-		document.querySelector('.author').innerText=author;
-		document.title = 'Wishes from '+author;
-		var greetings = "Wish u better and safe Diwali from"+author;
+		const capitalizeFirstChar = author.charAt(0).toUpperCase() + author.substring(1);
+		// document.querySelector('.authorName').innerText=capitalizeFirstChar;
+		document.querySelector('.author').innerText=capitalizeFirstChar;
+		document.querySelector('.wish').innerText=capitalizeFirstChar+" Wishing you very happy & safe Diwali";
+		document.title = capitalizeFirstChar+' wishing you a happy & safe Diwali.';
+		var greetings = "Wish u better and safe Diwali from"+capitalizeFirstChar;
 	    var x = document.getElementsByTagName("whatsapp")[0].setAttribute("href",window.location.href);
 	    var y = document.getElementsByTagName("whatsapp")[0].setAttribute("text",greetings);
 
