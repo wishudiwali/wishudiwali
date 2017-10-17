@@ -31,13 +31,36 @@
 					  <input type="text" name="name" placeholder="Enter Your Name" class="form-control" style="width: 100%;" id="usr">
 					</div>
 					<div class="form-group col-sm-6 col-xs-12">
-					  <button type="button" class="btn btn-success col-xs-6"><i class="fa fa-whatsapp"></i></button>
-					  <button type="button" class="btn btn-primary col-xs-6"><i class="fa fa-facebook"></i></button>
+					  <button type="button" class="btn btn-success col-xs-6"><a href="whatsapp://send" data-text="" data-href=""><i class="fa fa-whatsapp"></i></a></button>
+					  <button type="button" class="btn btn-primary col-xs-6">
+					  	<a href="#" target="_blank" id="fb">
+					  		<i class="fa fa-facebook"></i>
+					  	</a>
+					  </button>
 					</div>
 				</form>
 			</div>	
 		</div>
 	</body>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-101629966-2"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-101629966-2');
+	</script>
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- wishudiwali -->
+	<ins class="adsbygoogle"
+	     style="display:block"
+	     data-ad-client="ca-pub-8383222494793134"
+	     data-ad-slot="1833160039"
+	     data-ad-format="auto"></ins>
+	<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
 	<script type="text/javascript">
 		var foo = getParameterByName('name');
 		// var url = window.location.href.split('#');
@@ -46,6 +69,8 @@
 			author = foo;
 		}
 		document.querySelector('.author').innerText=author;
+		document.title = 'Wishes from '+author;
+		document.getElementById('fb').href = "https://www.facebook.com/sharer/sharer.php?"+window.location.href;
 		var options = {
 		  strings: [author, author],
 		  typeSpeed: 40,
