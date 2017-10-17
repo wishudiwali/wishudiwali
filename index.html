@@ -73,18 +73,19 @@
 		if (foo) {
 			author = foo;
 		}
+		// var options = {
+		//   strings: [author, author],
+		//   typeSpeed: 40,
+		//   loop: true
+		// }
+
+		// var typed = new Typed(".authorName", options);
+		document.querySelector('.authorName').innerText=author;
 		document.querySelector('.author').innerText=author;
 		document.title = 'Wishes from '+author;
 		var greetings = "Wish u better and safe Diwali from"+author;
 	    var x = document.getElementsByTagName("whatsapp")[0].setAttribute("href",window.location.href);
 	    var y = document.getElementsByTagName("whatsapp")[0].setAttribute("text",greetings);
-		var options = {
-		  strings: [author, author],
-		  typeSpeed: 40,
-		  loop: true
-		}
-
-		var typed = new Typed(".authorName", options);
 
 
 		function getParameterByName(name, url) {
