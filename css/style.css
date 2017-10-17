@@ -83,15 +83,15 @@ html,body{
 
 @media only screen and (max-width: 750px) {
     .element {
-        font-size: 3em !important;
+        font-size: 2em !important;
     }
 
 	.authorName{
-		font-size: 3em !important;
+		font-size: 2em !important;
 	}
 
 	.wish{
-		font-size: 3em !important;
+		font-size: 2em !important;
 	}
 }
 
